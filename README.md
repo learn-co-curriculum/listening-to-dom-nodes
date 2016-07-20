@@ -24,7 +24,7 @@ const main = document.getElementById('main')
 
 main.addEventListener('click', function(event) {
   alert('I was clicked!')
-}
+})
 ```
 
 Now if you click on the `main` element (you can click its text, "My ID is 'main'!"), you should see an alert: `'I was clicked!'. What's going on here?
@@ -171,3 +171,5 @@ You should now understand how to add an event listener, how different event trig
 - [MDN - Web Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 - [StackOverflow - Bubbling and Capturing](http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing)
 - [QuirksMode - Event order](http://www.quirksmode.org/js/events_order.html)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/listening-to-dom-nodes'>Listening To Nodes</a> on Learn.co and start learning to code for free.</p>
