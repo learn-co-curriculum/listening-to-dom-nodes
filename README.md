@@ -17,7 +17,7 @@ Well, we listen for them.
 
 Adding an event listener to a DOM node is easy — we just call `addEventListener()` on the node. `addEventListener()` takes to arguments: the name of the event, and a function to handle the event.
 
-Let's start by adding a listener for `click` events to the `main#main` element in `index.html`. Open the file in a browser, and in console enter:
+Let's start by adding a listener for `click` events two the `main#main` element in `index.html`. Open the file in a browser, and in console enter:
 
 ``` javascript
 const main = document.getElementById('main')
