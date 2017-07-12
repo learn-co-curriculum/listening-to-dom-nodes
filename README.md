@@ -6,6 +6,8 @@
 2. Trigger event listeners on DOM nodes
 3. Explain the difference between bubbling and capturing events
 
+Before we get started, follow [these instructions](http://help.learn.co/workflow-tips/github/how-to-manually-open-a-lab) to manually fork and clone the lesson repository on GitHub. In your forked and cloned copy, you'll find `index.html`, which you can then open up in the browser. (For instructions on opening HTML files in the browser from the Learn IDE, see [this Help Center article](http://help.learn.co/the-learn-ide/common-ide-questions/viewing-html-pages-in-the-learn-ide).)
+
 ## Say what?
 
 We've seen that we can easily manipulate nodes in the DOM, and even create and remove elements at will. But how do we interact with nodes on the page?
@@ -16,7 +18,7 @@ Well, we listen for them.
 
 Adding an event listener to a DOM node is easy — we just call `addEventListener()` on the node. `addEventListener()` takes two arguments: the name of the event, and a function to handle the event.
 
-Let's start by adding a listener for `click` events to the `main#main` element in `index.html`. Open the file in a browser and, in console, enter:
+Let's start by adding a listener for `click` events to the `main#main` element in `index.html`. Once you've opened `index.html` in the browser, enter the following in the browser's JS console:
 
 ```js
 const main = document.getElementById('main')
