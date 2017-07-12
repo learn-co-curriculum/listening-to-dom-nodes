@@ -1,5 +1,4 @@
-Listening to Nodes
----
+# Listening to Nodes
 
 ## Objectives
 
@@ -19,7 +18,7 @@ Adding an event listener to a DOM node is easy — we just call `addEventListene
 
 Let's start by adding a listener for `click` events to the `main#main` element in `index.html`. Open the file in a browser and, in console, enter:
 
-``` javascript
+```js
 const main = document.getElementById('main')
 
 main.addEventListener('click', function(event) {
@@ -33,7 +32,7 @@ The first argument, `'click'` is, as we've said, the name of the event we're lis
 
 The second argument is a function that accepts the event as its argument. The event has a number of useful properties on it — keypress, keydown, and keyup events, for example, will have a `which` property that tells us which key was pressed. Let's add an event listener to the `input` element to get a feel for this.
 
-``` javascript
+```js
 const input = document.querySelector('input')
 
 input.addEventListener('keydown', function(e) {
@@ -47,7 +46,7 @@ You'll notice that, for example, pressing "enter" prints `13` in console; pressi
 
 Refresh the page. We've got a vendetta against the letter "g" (71), so we're going to prevent the input from receiving "g"s. Enter the following in your console:
 
-``` javascript
+```js
 const input = document.querySelector('input')
 
 input.addEventListener('keydown', function(e) {
@@ -71,8 +70,8 @@ Yep.
 
 DOM events propagate by bubbling (starting at the target node and moving up the DOM tree to the root) and capturing (starting from the target node's parent elements and propagating down the tree until it reaches the target) — by default, events nowadays all bubble. We can verify this behavior by attaching listeners to those nested `div`s in `index.html`. Enter the following in your console:
 
-``` javascript
-const divs = document.querySelectorAll('div')
+```js
+let divs = document.querySelectorAll('div')
 
 function bubble(e) {
   // remember all of those fancy DOM node properties?
@@ -92,7 +91,7 @@ for (let i = 0; i < divs.length; i++) {
 
 Now click on the `div` containing "5". You should see
 
-``` javascript
+```js
 5 bubbled
 4 bubbled
 3 bubbled
@@ -106,8 +105,8 @@ Try clicking on a node that's not so deeply nested -- you should still see the e
 
 What about capturing? In order to capture, we need to set the third argument to `addEventListener` to `true`. Let's try it out.
 
-``` javascript
-const divs = document.querySelectorAll('div')
+```js
+divs = document.querySelectorAll('div')
 
 function capture(e) {
   console.log(this.firstChild.nodeValue.trim() + ' captured')
@@ -121,13 +120,17 @@ for (let i = 0; i < divs.length; i++) {
 
 Now click on `div` 5. You should see
 
-``` javascript
+```js
 1 captured
 2 captured
 3 captured
 4 captured
-5 bubbled # you won't see this if you refreshed the page
+5 bubbled
 5 captured
+4 bubbled
+3 bubbled
+2 bubbled
+1 bubbled
 ```
 
 Now, the event propagates from the top of the page towards the target node, triggering event handlers as appropriate along the way.
@@ -142,7 +145,7 @@ Now that you've learned a bit about the dangers and behavior of bubbling and cap
 
 Let's rewrite the bubbling example to stop propagation so that only one event is triggered (be sure to reload the page before entering this code!):
 
-``` javascript
+```js
 const divs = document.querySelectorAll('div')
 
 function bubble(e) {
