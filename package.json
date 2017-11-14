@@ -2,10 +2,6 @@
   "name": "listening-to-nodes",
   "version": "0.1.0",
   "description": "Introduction to adding event listeners to DOM nodes",
-  "engines": {
-    "node": "6.x",
-    "npm": "3.x"
-  },
   "main": "index.js",
   "repository": {
     "type": "git",
