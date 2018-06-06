@@ -6,7 +6,7 @@
 2. Trigger event listeners on DOM nodes
 3. Explain the difference between bubbling and capturing events
 
-Before we get started, follow [these instructions](http://help.learn.co/workflow-tips/github/how-to-manually-open-a-lab) to manually fork and clone the lesson repository on GitHub. In your forked and cloned copy, you'll find `index.html`, which you can then open up in the browser. (For instructions on opening HTML files in the browser from the Learn IDE, see [this Help Center article](http://help.learn.co/the-learn-ide/common-ide-questions/viewing-html-pages-in-the-learn-ide).)
+If you are using the Learn IDE available in your browser, you will automatically clone down the files you need when you click 'Open IDE', but in order to view index.html, you will need to use httpserver to serve the HTML page temporarily. In the terminal, type httpserver and press enter. You will see that Your server is running at ... followed by a string of numbers and dots. This string is a temporary IP address that is hosting your index.html file. Copy this string of numbers, open a new tab and past the string in to the URL bar.
 
 ## Say what?
 
