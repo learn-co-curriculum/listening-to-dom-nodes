@@ -22,7 +22,7 @@ clone down the files you need when you click 'Open IDE', but in order to view
 temporarily. In the terminal, type `httpserver` and press enter. You will see
 that `Your server is running at ...` followed by a string of numbers and dots.
 This string is a temporary IP address that is hosting your `index.html` file.
-Copy this string of numbers, open a new tab and past the string in to the URL
+Copy this string of numbers, open a new tab and paste the string in to the URL
 bar.
 
 #### Instructions for Students Using an Stand Alone Text-Editor
