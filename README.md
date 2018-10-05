@@ -87,14 +87,13 @@ default behavior of the input by keeping it from receiving the "g" character.
 Enter the following in your console:
 
 ```js
-const input = document.querySelector('input');
-
+const input = document.querySelector('input')
+ 
 input.addEventListener('keydown', function(e) {
   if (e.which === 71) {
-    console.log('default prevented');
-    return e.preventDefault();
+    return e.preventDefault()
   } else {
-    console.log('Not a "g"');
+    console.log(e.which)
   }
 });
 ```
