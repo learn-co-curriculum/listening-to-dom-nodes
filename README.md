@@ -64,21 +64,21 @@ common events are `change`, `'keydown'`, `'keyup'`, `'load'`, `'mouseover'`,
 [MDN][events].
 
 The second argument is a function that accepts the event as its argument. The
-event has a number of useful properties on it — keypress, keydown, and keyup
-events, for example, will have a `which` property that tells us which key was
-pressed. In the code snippet example below we add an event listener to the
-`input` element.
+`event` parameter has a number of useful properties on it — keypress, keydown,
+and keyup events, for example, will have a `key` property that tells us which
+key was pressed. In the code snippet example below we add an event listener to
+the `input` element.
 
 ```js
 const input = document.querySelector('input');
 
 input.addEventListener('keydown', function(e) {
-  console.log(e.which);
+  console.log(e.key);
 });
 ```
 
-If you test out this code, you'll see that pressing "enter" will print `13` in
-console; pressing "a" prints `65`; etc.
+If you test out this code, you'll see that pressing "enter" will print `"Enter"` in
+console; pressing "a" prints `"a"`; etc.
 
 ## Demonstrate Preventing the Default Behavior for DOM Nodes
 
@@ -88,12 +88,12 @@ Enter the following in your console:
 
 ```js
 const input = document.querySelector('input')
- 
+
 input.addEventListener('keydown', function(e) {
-  if (e.which === 71) {
+  if (e.key === "g") {
     return e.preventDefault()
   } else {
-    console.log(e.which)
+    console.log(e.key)
   }
 });
 ```
